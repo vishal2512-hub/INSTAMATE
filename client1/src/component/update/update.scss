@@ -1,0 +1,193 @@
+@import "../../style.scss";
+
+.update {
+  @include themify($themes) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+
+    .wrapper {
+      width: 50%;
+      max-width: 500px;
+      max-height: 80vh;
+      overflow-y: auto;
+      background-color: themed("bg");
+      padding: 30px;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+
+      @include mobile {
+        width: 90%;
+        padding: 20px;
+      }
+
+      h1 {
+        color: themed("textColor");
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .files {
+          display: flex;
+          gap: 20px;
+          margin-bottom: 10px;
+
+          @include mobile {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          label {
+            cursor: pointer;
+
+            span {
+              display: block;
+              margin-bottom: 8px;
+              color: themed("textColorSoft");
+              font-size: 14px;
+            }
+
+            .imgContainer {
+              position: relative;
+              width: 100px;
+              height: 100px;
+              border-radius: 8px;
+              overflow: hidden;
+              border: 2px dashed themed("border");
+              transition: all 0.3s ease;
+
+              &:hover {
+                border-color: #5271ff;
+                
+                .icon {
+                  opacity: 1;
+                }
+              }
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+
+              .icon {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.4);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                transition: all 0.3s ease;
+                color: white;
+              }
+            }
+          }
+        }
+
+        .inputs {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            label {
+              color: themed("textColorSoft");
+              font-size: 14px;
+            }
+
+            input {
+              padding: 10px;
+              border: 1px solid themed("border");
+              border-radius: 5px;
+              background-color: themed("bgSoft");
+              color: themed("textColor");
+              font-size: 14px;
+              transition: all 0.3s ease;
+
+              &:focus {
+                outline: none;
+                border-color: #5271ff;
+              }
+            }
+          }
+        }
+
+        .error {
+          color: #f0544f;
+          font-size: 14px;
+          text-align: center;
+        }
+
+        button {
+          padding: 12px;
+          background-color: #5271ff;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-weight: 500;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: darken(#5271ff, 10%);
+          }
+
+          &:disabled {
+            background-color: lighten(#5271ff, 20%);
+            cursor: not-allowed;
+          }
+        }
+      }
+
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        border: none;
+        border-radius: 50%;
+        background-color: #f0544f;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: darken(#f0544f, 10%);
+        }
+      }
+    }
+  }
+}

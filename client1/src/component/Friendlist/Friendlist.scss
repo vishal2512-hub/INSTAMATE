@@ -1,0 +1,75 @@
+@import "../../style.scss";
+
+.friendList {
+  @include themify($themes) {
+    height: 1000px;
+    padding: 20px;
+    background-color: themed("bg");
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: themed("textColor");
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .friendItem {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      border-bottom: 1px solid themed("border");
+      background: themed("bgSoft");
+      border-radius: 8px;
+      margin-bottom: 8px;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: themed("hoverBg");
+      }
+
+      .friendLink {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        flex-grow: 1;
+      }
+
+      .friendImg {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 12px;
+        border: 2px solid themed("primary");
+        object-fit: cover;
+      }
+
+      span {
+        font-size: 18px;
+        font-weight: bold;
+        color: themed("textColor");
+      }
+
+      .unfollowBtn {
+        background: #ff4d4d;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        font-size: 14px;
+
+        &:hover {
+          background: #cc0000;
+        }
+      }
+    }
+  }
+}
