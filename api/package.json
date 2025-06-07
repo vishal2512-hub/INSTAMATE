@@ -7,6 +7,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "build": "vite build"
+
   },
   "dependencies": {
     "dotenv": "^16.4.7",
