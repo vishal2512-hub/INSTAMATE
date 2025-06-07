@@ -4,9 +4,11 @@
   "description": "Social Media Backend",
   "main": "index.js",
   "type": "module",
-"scripts": {
-  "start": "nodemon index.js",
-  "build": "tsc"
+ "scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
 },
   "dependencies": {
     "dotenv": "^16.4.7",
