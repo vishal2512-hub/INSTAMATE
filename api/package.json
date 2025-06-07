@@ -4,11 +4,10 @@
   "description": "Social Media Backend",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "start": "nodemon index.js",
-    "build": "vite build"
-
-  },
+"scripts": {
+  "start": "nodemon index.js",
+  "build": "tsc"
+},
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.x",
