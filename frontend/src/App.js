@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Login from "./pages/login/Login";
+import Login from "./pages/Login/Login";
 import Register from "./pages/register/Register";
 import Navbar from "./component/navbar/Navbar";
 import {
