@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/INSTAMATE/static/css/main.d3cca883.css",
+    "main.js": "/INSTAMATE/static/js/main.c20bc471.js",
+    "index.html": "/INSTAMATE/index.html",
+    "main.d3cca883.css.map": "/INSTAMATE/static/css/main.d3cca883.css.map",
+    "main.c20bc471.js.map": "/INSTAMATE/static/js/main.c20bc471.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3cca883.css",
+    "static/js/main.c20bc471.js"
+  ]
+}
