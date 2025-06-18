@@ -2,6 +2,7 @@
   "name": "insta2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://vishal2512-hub.github.io/INSTAMATE",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
@@ -24,7 +25,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  
   "browserslist": {
     "production": [
       ">0.2%",
@@ -38,9 +38,11 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.3.0",
     "sass": "^1.83.4",
     "sass-loader": "^16.0.4",
+    "vite-plugin-static-copy": "^3.0.2",
     "web-vitals": "^4.2.4"
   }
 }
