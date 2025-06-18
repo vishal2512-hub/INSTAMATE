@@ -3,7 +3,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/register/Register";
 import Navbar from "./component/navbar/Navbar";
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
   Outlet,
   Navigate,
@@ -79,7 +79,7 @@ const ProtectedRoute = ({ children }) => {
   return children;
 };
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Navigate to="/login" />, // Redirects to Login by default
