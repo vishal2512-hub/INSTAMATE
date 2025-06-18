@@ -117,6 +117,8 @@ const router = createHashRouter([
   },
   { path: "/login", element: <Login /> },
   { path: "/register", element: <Register /> },
+  { path: "*", element: <Navigate to="/login" /> },
+
 ]);
 
 const App = () => {
