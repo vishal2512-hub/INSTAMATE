@@ -95,10 +95,10 @@ const Profile = () => {
   return (
     <div className="profile">
       <div className="images">
-        <img className="cover" src={`/upload/${user.coverPic}`} alt="Cover" />
+        <img className="cover" src={`http://localhost:8801/upload/${user.coverPic}`} alt="Cover" />
         <img
           className="profilePic"
-          src={`/upload/${user.profilePic}`}
+          src={`http://localhost:8801/upload/${user.profilePic}`}
           alt="Profile"
         />
       </div>

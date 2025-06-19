@@ -93,7 +93,7 @@ const Post = ({ post }) => {
       <div className="container">
         <div className="user">
           <div className="userInfo">
-            <img src={`/upload/${post.profilePic}`} alt="User" />
+            <img src={`http://localhost:8801/upload/${post.profilePic}`} alt="User" />
             <div className="details">
               <Link to={`/home/profile/${post.userId}`} style={{ textDecoration: "none", color: "inherit" }}>
                 <span className="name">{post.name}</span>
@@ -109,8 +109,8 @@ const Post = ({ post }) => {
 
         <div className="content">
           <p>{post.desc}</p>
-          {post.img && <img src={`/upload/${post.img}`} alt="Post" />}
-          {post.video && <video controls src={`/upload/${post.video}`} className="post-video" />}
+          {post.img && <img src={`http://localhost:8801/upload/${post.img}`} alt="Post" />}
+          {post.video && <video controls src={`http://localhost:8801/upload/${post.video}`} className="post-video" />}
         </div>
 
         <div className="info">

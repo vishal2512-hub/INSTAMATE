@@ -33,7 +33,7 @@ const Friend = () => {
           {friends.map((friend) => (
             <li key={friend.id} className="friendItem">
               <Link to={`/home/profile/${friend.id}`} className="friendLink">
-                <img src={`/upload/${friend.profilePic}`} alt={friend.name} className="friendImg" />
+                <img src={`http://localhost:8801/upload/${friend.profilePic}`} alt={friend.name} className="friendImg" />
                 <span>{friend.name}</span>
               </Link>
               <button className="unfollowBtn" onClick={() => handleUnfollow(friend.id)}>

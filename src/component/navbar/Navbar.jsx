@@ -96,7 +96,7 @@ const Navbar = () => {
               notifications.map((notification) => (
                 <div key={notification.id} className={`notification-item ${!notification.isRead ? "unread" : ""}`}>
                   {notification.profilePic ? (
-                    <img src={`/upload/${notification.profilePic}`} alt="User" />
+                    <img src={`http://localhost:8801/upload/${notification.profilePic}`} alt="User" />
                   ) : (
                     <AccountCircleOutlinedIcon className="fallback-icon" />
                   )}
@@ -115,7 +115,7 @@ const Navbar = () => {
         <div className="user">
           <Link to={`/home/profile/${currentUser?.id}`}>
             {currentUser?.profilePic ? (
-              <img src={"/upload/" + currentUser.profilePic} alt="Profile" />
+                    <img src={`http://localhost:8801/upload/${currentUser.profilePic}`} alt="User" />
             ) : (
               <AccountCircleOutlinedIcon style={{ fontSize: 40 }} />
             )}
