@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/INSTAMATE/static/css/main.d3cca883.css",
-    "main.js": "/INSTAMATE/static/js/main.130926b5.js",
-    "index.html": "/INSTAMATE/index.html",
-    "main.d3cca883.css.map": "/INSTAMATE/static/css/main.d3cca883.css.map",
-    "main.130926b5.js.map": "/INSTAMATE/static/js/main.130926b5.js.map"
+    "main.css": "/vishal2512-hub/INSTAMATE.git/static/css/main.d3cca883.css",
+    "main.js": "/vishal2512-hub/INSTAMATE.git/static/js/main.9fb6a2ea.js",
+    "index.html": "/vishal2512-hub/INSTAMATE.git/index.html",
+    "main.d3cca883.css.map": "/vishal2512-hub/INSTAMATE.git/static/css/main.d3cca883.css.map",
+    "main.9fb6a2ea.js.map": "/vishal2512-hub/INSTAMATE.git/static/js/main.9fb6a2ea.js.map"
   },
   "entrypoints": [
     "static/css/main.d3cca883.css",
-    "static/js/main.130926b5.js"
+    "static/js/main.9fb6a2ea.js"
   ]
 }
