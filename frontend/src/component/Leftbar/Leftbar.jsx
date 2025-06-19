@@ -81,7 +81,7 @@ const LeftBar = () => {
           <div className="user">
             <Link to={`/home/profile/${currentUser?.id}`}>
               {currentUser?.profilePic ? (
-                <img src={"/upload/" + currentUser.profilePic} alt="Profile" />
+<img src={`http://localhost:8801/upload/${currentUser.profilePic}`} alt="Profile" />
               ) : (
                 <AccountCircleOutlinedIcon style={{ fontSize: 40 }} />
               )}

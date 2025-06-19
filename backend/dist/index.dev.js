@@ -2,6 +2,12 @@
 
 var _express = _interopRequireDefault(require("express"));
 
+var _cookieParser = _interopRequireDefault(require("cookie-parser"));
+
+var _cors = _interopRequireDefault(require("cors"));
+
+var _multer = _interopRequireDefault(require("multer"));
+
 var _users = _interopRequireDefault(require("./routes/users.js"));
 
 var _auth = _interopRequireDefault(require("./routes/auth.js"));
@@ -14,12 +20,6 @@ var _likes = _interopRequireDefault(require("./routes/likes.js"));
 
 var _relationship = _interopRequireDefault(require("./routes/relationship.js"));
 
-var _cookieParser = _interopRequireDefault(require("cookie-parser"));
-
-var _cors = _interopRequireDefault(require("cors"));
-
-var _multer = _interopRequireDefault(require("multer"));
-
 var _notification = _interopRequireDefault(require("./routes/notification.js"));
 
 var _conversation = _interopRequireDefault(require("./routes/conversation.js"));
@@ -30,8 +30,9 @@ var _stories = _interopRequireDefault(require("./routes/stories.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var app = (0, _express["default"])();
-// Correct Path
+// Routes
+var app = (0, _express["default"])(); // Allow credentials in CORS
+
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Credentials", true);
   next();
@@ -39,15 +40,15 @@ app.use(function (req, res, next) {
 app.use(_express["default"].json());
 app.use((0, _cors["default"])({
   origin: "http://localhost:3000",
-  // Your frontend URL
-  credentials: true // Allow credentials
-
+  credentials: true
 }));
-app.use((0, _cookieParser["default"])()); // multer middleware defined for image upload
+app.use((0, _cookieParser["default"])()); // ✅ Serve uploaded images statically
+
+app.use("/upload", _express["default"]["static"]("../frontend/public/upload")); // ✅ Multer setup for uploads
 
 var storage = _multer["default"].diskStorage({
   destination: function destination(req, file, cb) {
-    cb(null, '../client/social-media/public/upload');
+    cb(null, "../frontend/public/upload");
   },
   filename: function filename(req, file, cb) {
     cb(null, file.originalname);
@@ -56,12 +57,16 @@ var storage = _multer["default"].diskStorage({
 
 var upload = (0, _multer["default"])({
   storage: storage
-});
-app.post("/api/upload", upload.single('file'), function (req, res) {
+}); // ✅ Upload route
+
+app.post("/api/upload", upload.single("file"), function (req, res) {
   var file = req.file;
-  res.status(200).json(file.filename);
-});
-console.log("i am in index page");
+  if (!file) return res.status(400).json("No file uploaded");
+  res.status(200).json({
+    filename: file.originalname
+  });
+}); // ✅ API routes
+
 app.use("/api/users", _users["default"]);
 app.use("/api/notifications", _notification["default"]);
 app.use("/api/auth", _auth["default"]);
@@ -71,7 +76,8 @@ app.use("/api/likes", _likes["default"]);
 app.use("/api/relationships", _relationship["default"]);
 app.use("/api/stories", _stories["default"]);
 app.use("/api/conversations", _conversation["default"]);
-app.use("/api/messages", _message["default"]);
+app.use("/api/messages", _message["default"]); // ✅ Start server
+
 app.listen(8801, function () {
-  console.log("API working");
+  console.log("API working on port 8801");
 });

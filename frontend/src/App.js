@@ -3,7 +3,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/register/Register";
 import Navbar from "./component/navbar/Navbar";
 import {
-  createHashRouter,
+  createBrowserRouter,
   RouterProvider,
   Outlet,
   Navigate,
@@ -79,10 +79,13 @@ const ProtectedRoute = ({ children }) => {
   return children;
 };
 
-const router = createHashRouter([
+
+
+
+const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Navigate to="/login" />, // Redirects to Login by default
+    path: "/INSTAMATE",
+    element: <Navigate to="/login" />,
   },
   {
     path: "/home",
@@ -108,7 +111,7 @@ const router = createHashRouter([
     ],
   },
   {
-    path: "/friends", // ✅ Added Friends Route
+    path: "/friends",
     element: (
       <ProtectedRoute>
         <FriendsLayout />
@@ -117,7 +120,12 @@ const router = createHashRouter([
   },
   { path: "/login", element: <Login /> },
   { path: "/register", element: <Register /> },
+  {
+    path: "*", // ✅ Catch-all route
+    element: <div style={{ padding: 20 }}><h1>404 - Page Not Found</h1></div>,
+  }
 ]);
+
 
 const App = () => {
   return (
