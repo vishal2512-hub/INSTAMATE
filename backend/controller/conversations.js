@@ -13,7 +13,7 @@ export const findOrCreateConversation = async (req, res) => {
   }
 
   try {
-    // Check if both users exist
+    // Check if both users existz
     const [users] = await db.promise().query(
       `SELECT id FROM users WHERE id IN (?, ?)`,
       [parsedUserId1, parsedUserId2]
