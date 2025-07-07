@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/INSTAMATE/static/css/main.d3cca883.css",
-    "main.js": "/INSTAMATE/static/js/main.86013d2d.js",
+    "main.js": "/INSTAMATE/static/js/main.e60d732d.js",
     "index.html": "/INSTAMATE/index.html",
     "main.d3cca883.css.map": "/INSTAMATE/static/css/main.d3cca883.css.map",
-    "main.86013d2d.js.map": "/INSTAMATE/static/js/main.86013d2d.js.map"
+    "main.e60d732d.js.map": "/INSTAMATE/static/js/main.e60d732d.js.map"
   },
   "entrypoints": [
     "static/css/main.d3cca883.css",
-    "static/js/main.86013d2d.js"
+    "static/js/main.e60d732d.js"
   ]
 }
