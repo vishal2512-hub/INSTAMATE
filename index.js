@@ -78,7 +78,7 @@ app.use("/api/stories", storyRoutes);
 app.use("/api/conversations", conversationsRoute);
 app.use("/api/messages", messagesRoute);
 
-const PORT = process.env.PORT || 8801;
+const PORT = process.env.PORT || 10000;
 
 app.listen(PORT, () => {
   console.log("API working on port", PORT);
