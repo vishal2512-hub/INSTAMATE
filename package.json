@@ -23,5 +23,16 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishal2512-hub/INSTAMATE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishal2512-hub/INSTAMATE/issues"
+  },
+  "homepage": "https://github.com/vishal2512-hub/INSTAMATE#readme"
 }
