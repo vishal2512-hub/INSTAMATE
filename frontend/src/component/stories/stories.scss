@@ -1,0 +1,85 @@
+@import "../../style.scss";
+
+
+.stories {
+  @include themify($themes) {
+
+  display: flex;
+  gap: 10px;
+  height: 90px;
+  margin-bottom: 30px;
+
+  @include mobile {
+    height: 50px;
+    margin-bottom: 0;
+    justify-content: space-between;
+  }
+
+  @include tablet{
+    height: 150px;
+    gap: 20px;
+  }
+
+  .story {
+    flex: 1.5;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+
+    @include mobile {
+      flex: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    img {
+      width: 80%;
+      height: 80%;
+      border-radius: 50%;
+      object-fit: cover;
+      padding: 3px; // Adjust padding to show the border properly
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366,purple, #bc1888);
+      border: 1px solid transparent; // Make space for the gradient
+      box-sizing: border-box;
+    }
+    span {
+      margin-top: 30px;
+      position: absolute;
+      bottom: 0px;
+      left: 20px;
+      color: white;
+      font-weight: 500;
+      color: themed('textColor');
+      @include mobile {
+        display: none;
+      }
+    }
+
+    button {
+      position: absolute;
+      bottom: 15px;
+      left: 50px;
+      color: white;
+      background-color: #5271ff;
+      border: none;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include mobile {
+       left: 0;
+       right: 0;
+       top: 0;
+       bottom: 0;
+       margin: auto;
+      }
+    }
+  }
+}
+}
