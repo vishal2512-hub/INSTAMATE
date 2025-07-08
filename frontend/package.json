@@ -1,0 +1,77 @@
+{
+<<<<<<< HEAD
+  "name": "insta2",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://vishal2512-hub.github.io/INSTAMATE",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.2.0",
+    "@mui/material": "^7.2.0",
+    "@tanstack/react-query": "^5.64.2",
+    "axios": "^1.10.0",
+    "dotenv": "^17.0.1",
+    "es-abstract": "^1.22.0",
+    "lucide-react": "^0.471.2",
+    "moment": "^2.30.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.3",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+  "build": "react-scripts build",      
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "gh-pages": "^6.3.0",
+    "sass": "^1.83.4",
+    "sass-loader": "^16.0.4",
+    "vite-plugin-static-copy": "^3.0.2",
+    "web-vitals": "^4.2.4"
+=======
+  "name": "social-media-api",
+  "version": "1.0.0",
+  "description": "Social Media Backend",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.30.1",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+>>>>>>> b0bbd11b73cf95b634a4010b17d6ac4b2bd1732a
+  }
+}
