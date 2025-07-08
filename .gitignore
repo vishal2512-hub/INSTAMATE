@@ -1,0 +1,65 @@
+# -----------------------------
+# 📦 Node.js dependencies
+# -----------------------------
+node_modules/  **/node_modules/
+
+# -----------------------------
+# 🏗️ Build & Dist folders
+# -----------------------------
+build/
+dist/
+**/build/
+**/dist/
+
+# -----------------------------
+# 🔐 Environment config
+# -----------------------------
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+**/.env
+**/.env.*
+
+# -----------------------------
+# 🧹 Logs
+# -----------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# -----------------------------
+# 💣 Large files (compressed/media)
+# -----------------------------
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.mp4
+*.mov
+/uploads/
+**/*.zip
+**/*.mp4
+
+# -----------------------------
+# 🛠️ IDE/editor config
+# -----------------------------
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# -----------------------------
+# 🖥️ OS junk files
+# -----------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# -----------------------------
+# 🧪 Testing folders (optional)
+# -----------------------------
+coverage/
+**/coverage/
